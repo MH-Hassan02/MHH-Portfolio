@@ -1,0 +1,113 @@
+.projectBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  padding: 50px 10px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
+  background-image: url(../Images/hell.jpg); /* Default background image */
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  border: 1px solid silver;
+  margin-bottom: 40px;
+}
+
+/* Light theme: replace image with gradient */
+[data-theme="light"] .projectBox {
+  background: linear-gradient(-90deg, #fff, #ccc);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Default dark theme overlay */
+  z-index: 1;
+}
+
+[data-theme="light"] .overlay {
+  background: rgba(255, 255, 255, 0.5); /* Light theme overlay */
+}
+
+.projectBox:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.projectBox:nth-child(even) {
+  align-self: flex-end;
+}
+
+.projectImage {
+  width: 100%;
+  z-index: 2;
+}
+
+.projectImage img {
+  height: 150px;
+  width: 100%;
+}
+
+.projectText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  gap: 10px;
+  z-index: 2;
+}
+
+.projectBtns{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px auto;
+}
+
+.projectText button {
+  padding: 10px 20px;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.projectText button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+@media (max-width: 1500px){
+  .projectBox{
+    width: 350px;
+  }
+}
+
+@media (max-width: 450px){
+  .projectBox{
+    width: 100%
+  }
+}
+
+@media (min-width: 1500px){
+  .projectBox{
+    width: 420px;
+  }
+}
+
+@media (min-width: 1600px) and (max-width:1900px){
+  .projectBox{
+    width: 500px;
+  }
+}

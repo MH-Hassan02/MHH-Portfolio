@@ -1,0 +1,79 @@
+.services-section {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--body-bg-color);
+    color: var(--body-text-color);
+  }
+  
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .service-card {
+    flex: 0 1 240px;
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .service-card i {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .service-card h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .service-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--desc-text-color);
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: var(--progress-bg-color);
+    border-radius: 10px;
+    height: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    background-color: var(--reflection-color);
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Dark and Light Theme Variables */
+  [data-theme="light"] {
+    --body-bg-color: #f5f5f5;
+    --body-text-color: #333;
+    --card-bg-color: #fff;
+    --progress-bg-color: #ddd;
+    --progress-fill-color: #6200ea;
+    --desc-text-color: #555;
+  }
+  
+  [data-theme="dark"] {
+    --body-bg-color: #1e1e1e;
+    --body-text-color: #f5f5f5;
+    --card-bg-color: #333;
+    --progress-bg-color: #555;
+    --progress-fill-color: #03dac6;
+    --desc-text-color: #aaa;
+  }
+  

@@ -1,0 +1,168 @@
+.navbar-container {
+  position: relative;
+  background-color: var(--body-bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  color: var(--body-text-color);
+  position: relative;
+}
+
+.navbar-logo img {
+  width: 200px;
+  height: 40px;
+}
+
+/* Menu Styling */
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  position: relative;
+}
+
+/* Menu Links */
+.navbar-menu a {
+  color: var(--body-text-color);
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+  width: 80px;
+}
+
+/* Active Link */
+.navbar-menu a.active {
+  color: var(--button-bg-color);
+  font-weight: bold;
+}
+
+/* Hover Effect */
+.navbar-menu a:hover {
+  transform: scale(1.15);
+  transition: transform 0.5s ease;
+  color: var(--button-bg-color);
+}
+
+/* Navbar Toggle Button */
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
+  border: none;
+}
+
+/* Theme Button */
+.navbar-button {
+  padding: 10px 20px;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Ensure the gap between buttons */
+}
+
+.navbar-button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+/* Theme Icon Label */
+.theme-label {
+  display: none;
+}
+
+/* Menu Open State in Mobile */
+.navbar-menu.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: var(--body-bg-color);
+  top: 80px; /* Drop down below the navbar */
+  left: 0;
+  width: 100%; /* Full width */
+  height: auto;
+  z-index: 5;
+  padding: 20px 0;
+}
+
+/* Reflection Effect */
+.navbar-reflection {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--reflection-color),
+    transparent
+  );
+  animation: reflection-move 3s infinite linear;
+}
+
+@keyframes reflection-move {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+  /* Hide Menu in Mobile View by Default */
+  .navbar-menu {
+    display: none;
+  }
+
+  /* Display Navbar Toggle Button in Mobile View */
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* Mobile Menu Open State */
+  .navbar-menu.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Align Theme Toggle Button with Menu Toggle */
+  .navbar-button {
+    display: inline-flex;
+    margin-left: 20px; /* Gap between buttons */
+  }
+
+  /* Hide Theme Label in Mobile */
+  .theme-label {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .theme-label {
+    display: inline;
+  }
+
+  .theme-icon {
+    margin-left: 8px;
+  }
+}
