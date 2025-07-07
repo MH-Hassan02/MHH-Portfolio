@@ -8,8 +8,15 @@ import project4 from "../Images/smitpic.png";
 import project5 from "../Images/upworkpic.png";
 import project6 from "../Images/cbpic.png";
 import project7 from "../Images/homemate.png"
+import project8 from "../Images/signify.png"
 
 const projectData = [
+  {
+    title: "HomeMate Website",
+    desc: "A real-time video calling and chatting application made on MERN Stack using web-sockets.",
+    url: "https://homemate-one.vercel.app",
+    image: project8,
+  },
   {
     title: "HomeMate Website",
     desc: "A full-stack home rental website made using MERN",
@@ -46,12 +53,12 @@ const projectData = [
   //   url: "https://upwork-clone-henna.vercel.app/",
   //   image: project5,
   // },
-  {
-    title: "Coinbase Clone",
-    desc: "Cloned the frontpage UI",
-    url: "https://coin-base-website.vercel.app/",
-    image: project6,
-  },
+  // {
+  //   title: "Coinbase Clone",
+  //   desc: "Cloned the frontpage UI",
+  //   url: "https://coin-base-website.vercel.app/",
+  //   image: project6,
+  // },
 ];
 
 const Projects = () => {
