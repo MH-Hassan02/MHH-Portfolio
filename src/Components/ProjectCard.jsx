@@ -16,9 +16,10 @@ const ProjectCard = ({ title, desc, url, image }) => {
           <a href={url} target="_blank" rel="noopener noreferrer">
             <button>View Project</button>
           </a>
-          <Link>
+          { /*  <Link>
             <button>View Details</button>
           </Link>
+          */}
         </div>
       </div>
     </div>
