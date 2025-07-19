@@ -12,9 +12,9 @@ import project8 from "../Images/signify.png"
 
 const projectData = [
   {
-    title: "HomeMate Website",
+    title: "Signify Website",
     desc: "A real-time video calling and chatting application made on MERN Stack using web-sockets.",
-    url: "https://homemate-one.vercel.app",
+    url: "https://signify-frontend.vercel.app",
     image: project8,
   },
   {
